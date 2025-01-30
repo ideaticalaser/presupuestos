@@ -8,10 +8,13 @@ function calcular() {
     const superficie = parseFloat(document.getElementById('superficie').value) || 0;
     const adicional = parseFloat(document.getElementById('adicional').value) || 0;
 
+    // Obtener el costo del material seleccionado
+    const material = parseFloat(document.getElementById('material').value);
+
     // Calcular
     const costoTotal = 
         (tiempo * TARIFA_POR_MINUTO) + 
-        (superficie * COSTO_POR_CM2) + 
+        (superficie * material) + 
         adicional;
 
     // Mostrar resultado
